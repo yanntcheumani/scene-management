@@ -8,17 +8,20 @@
 #ifndef INC_EDBC1FCB623443A2903877287B7E6592
 #define INC_EDBC1FCB623443A2903877287B7E6592
 #include "Scene/AScene.hpp"
+#include "Object/Case/Case.hpp"
 
 namespace scenes {
   class Game: public AScene {
   public:
-      explicit Game(sf::RenderWindow &window): AScene(window) {}
+      explicit Game(sf::RenderWindow &window);
       utils::exit_code_t poll_event() override {return utils::CONTINUE;};
       void draw_scene() override {
           this->_window.clear();
           this->_window.display();
       };
       void tick() override {};
+  private:
+    std::list<std::list<std::shared_ptr<object::AObject>>> _case;
   };
 };
 #endif //INC_EDBC1FCB623443A2903877287B7E6592
