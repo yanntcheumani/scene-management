@@ -9,6 +9,12 @@
 #define INC_AE7864C126C645A9BF5181B5778FFFD8
 #include <iostream>
 #include <string>
+#include <SFML/Graphics.hpp>
+
+#define WATER_ELEMENT sf::Color(212, 241, 249);
+#define DARK_WATER_ELEMENT sf::Color(131,215,238)
+#define GROUND_ELEMENT sf::Color(124, 40, 17)
+#define DARK_GROUND_ELEMENT sf::Color(113, 46, 28)
 
 namespace utils {
 

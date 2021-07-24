@@ -15,10 +15,7 @@ namespace scenes {
   public:
       explicit Game(sf::RenderWindow &window);
       utils::exit_code_t poll_event() override {return utils::CONTINUE;};
-      void draw_scene() override {
-          this->_window.clear();
-          this->_window.display();
-      };
+      void draw_scene() override;
       void tick() override {};
   private:
     std::list<std::list<std::shared_ptr<object::AObject>>> _case;

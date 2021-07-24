@@ -10,6 +10,19 @@
 namespace object {
     AObject::AObject() = default;
 
-    AObject::~AObject() = default;
+    const sf::Sprite &AObject::getSprite() const {
+        return _sprite;
+    }
 
+    const sf::Texture &AObject::getTexture() const {
+        return _texture;
+    }
+
+    const sf::Vector2f &AObject::getPosition() const {
+        return _position;
+    }
+
+    const sf::IntRect &AObject::getRect() const {
+        return _rect;
+    }
 }

@@ -14,12 +14,21 @@ namespace object {
     class AObject {
     public:
         AObject();
-        ~AObject();
+        virtual ~AObject() = default;
         virtual void tick() = 0;
+        virtual void draw_object(sf::RenderWindow &window) = 0;
+
+        const sf::Sprite &getSprite() const;
+
+        const sf::Texture &getTexture() const;
+
+        const sf::Vector2f &getPosition() const;
+
+        const sf::IntRect &getRect() const;
 
     protected:
-        sf::Sprite sprite;
-        sf::Texture texture;
+        sf::Sprite _sprite;
+        sf::Texture _texture;
         sf::Vector2f _position;
         sf::IntRect _rect;
     };
