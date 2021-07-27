@@ -9,14 +9,17 @@
 
 namespace scenes {
     Game::Game(sf::RenderWindow &window) : AScene(window) {
-        sf::Vector2f size(50, 50);
+        sf::Vector2f size(MAX_X, MAX_Y);
+        int xx = 0, yy = 0;
 
-        for (int y = 10; y < 10 * size.y; y+= size.y) {
+        for (int y = 10; yy < MAX_Y; y+= size.y, yy++) {
             std::list<std::shared_ptr<object::AObject>> ll;
-            for (int x = 10; x < 10 * size.x; x += size.x) {
+            for (int x = 10; xx < MAX_X; x += size.x, xx++) {
                 sf::Vector2f pos(y, x);
-                ll.push_back(std::make_shared<object::Case>(pos, size));
+                ll.push_back(std::make_shared<object::Case>(pos, size, xx,
+                                                            yy));
             }
+            xx = 0;
             this->_case.push_back(ll);
         }
     }
