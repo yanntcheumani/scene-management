@@ -42,7 +42,9 @@ namespace object {
             return DARK_GROUND_ELEMENT;
         else if (_water >= 20 and _water <= 50)
             return GROUND_ELEMENT;
-        return WATER_ELEMENT;
+        else if (_water >= 50 and _water <= 75)
+            return WATER_ELEMENT;
+        return DARK_WATER_ELEMENT;
     }
 
     Case::~Case() = default;
