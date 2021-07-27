@@ -15,8 +15,13 @@
 #define DARK_WATER_ELEMENT sf::Color(0,0, 200)
 #define GROUND_ELEMENT sf::Color(124, 40, 17)
 #define DARK_GROUND_ELEMENT sf::Color(113, 46, 28)
+
 #define MAX_Y 30
 #define MAX_X 30
+
+#define HOURS 6000
+
+#define THICKNESS 5
 namespace utils {
 
     typedef enum all_scenes {

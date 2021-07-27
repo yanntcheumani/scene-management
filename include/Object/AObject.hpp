@@ -9,13 +9,17 @@
 #define INC_4C755B11B10344E8B40528FD35A75DC8
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <list>
+#include <memory>
 
 namespace object {
+    class Case;
     class AObject {
     public:
         AObject();
         virtual ~AObject() = default;
         virtual void tick() = 0;
+        virtual void tick(std::map<int, std::list<std::shared_ptr<object::Case>>>) = 0;
         virtual void draw_object(sf::RenderWindow &window) = 0;
 
         const sf::Sprite &getSprite() const;

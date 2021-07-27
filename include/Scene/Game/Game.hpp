@@ -16,9 +16,9 @@ namespace scenes {
       explicit Game(sf::RenderWindow &window);
       utils::exit_code_t poll_event() override {return utils::CONTINUE;};
       void draw_scene() override;
-      void tick() override {};
+      void tick() override;
   private:
-    std::list<std::list<std::shared_ptr<object::AObject>>> _case;
+    std::map<int, std::list<std::shared_ptr<object::Case>>> _case;
   };
 };
 #endif //INC_EDBC1FCB623443A2903877287B7E6592

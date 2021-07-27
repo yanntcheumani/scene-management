@@ -2,7 +2,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+    sf::RenderWindow window(sf::VideoMode(MODE_WiDTH, MODE_HEIGHT), "SFML window");
     core::Core cores(window);
 
     cores.add_scene(utils::GAME);

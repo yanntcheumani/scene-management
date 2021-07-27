@@ -7,6 +7,7 @@
 
 #include "Core/Core.hpp"
 
+
 namespace core {
 
     Core::Core(sf::RenderWindow &window):
