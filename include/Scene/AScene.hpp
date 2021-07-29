@@ -47,7 +47,7 @@ namespace scenes {
             _text = text;
         }
 
-        utils::exit_code_t poll_event() override {return utils::CONTINUE;};
+        utils::exit_code_t poll_event(sf::Event &event) override {return utils::CONTINUE;};
 
         void draw_scene() override {
             this->_window.clear();

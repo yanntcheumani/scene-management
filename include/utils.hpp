@@ -25,7 +25,7 @@
 #define SIZE_MAX_Y 32
 #define SIZE_MAX_X 32
 
-#define HOURS 2000
+#define HOURS 0100
 
 #define THICKNESS 5
 namespace utils {
@@ -34,6 +34,13 @@ namespace utils {
         MENU,
         GAME
     } All_scenes;
+
+    typedef enum direction_t {
+        MOVE_UP,
+        MOVE_DOWN,
+        MOVE_RIGHT,
+        MOVE_LEFT
+    } direction;
 
     typedef enum exit_code_s {
         SUCCESS,

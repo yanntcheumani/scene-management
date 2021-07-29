@@ -28,9 +28,11 @@ namespace core {
             if (event.type == sf::Event::Closed)
                 _window.close();
         }
-        ret = this->_scene->poll_event();
+        ret = this->_scene->poll_event(event);
         if (ret == utils::END) {
+            std::cout << "quitter" << std::endl;
             this->_window.close();
+            this->get_last_scene();
         }
         if (ret == utils::EXIT_SCENE) {
             this->get_last_scene();

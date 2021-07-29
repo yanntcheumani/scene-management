@@ -25,4 +25,16 @@ namespace object {
     const sf::IntRect &AObject::getRect() const {
         return _rect;
     }
+
+    void AObject::move(utils::direction_t direction) {
+        if (direction == utils::MOVE_LEFT)
+            this->_sprite.move(-1, 0);
+        else if (direction == utils::MOVE_RIGHT)
+            this->_sprite.move(1, 0);
+        else if (direction == utils::MOVE_UP)
+            this->_sprite.move(0, -1);
+        else if (direction == utils::MOVE_DOWN)
+            this->_sprite.move(0, 1);
+
+    }
 }

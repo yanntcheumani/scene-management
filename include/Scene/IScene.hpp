@@ -17,7 +17,7 @@ namespace scenes {
     public:
         IScene() = default;
         virtual ~IScene() = default;
-        virtual utils::exit_code_t poll_event() = 0;
+        virtual utils::exit_code_t poll_event(sf::Event& event) = 0;
         virtual void draw_scene() = 0;
         virtual void tick() = 0;
     private:

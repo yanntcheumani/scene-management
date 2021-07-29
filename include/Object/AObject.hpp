@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include <list>
 #include <memory>
+#include "utils.hpp"
 
 namespace object {
     class Case;
@@ -30,7 +31,7 @@ namespace object {
         const sf::Vector2f &getPosition() const;
 
         const sf::IntRect &getRect() const;
-
+        void move(utils::direction_t direction);
     protected:
         sf::Sprite _sprite;
         sf::Texture _texture;

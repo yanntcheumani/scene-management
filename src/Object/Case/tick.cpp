@@ -36,11 +36,11 @@ namespace object {
         if (this->_x_pos < MAX_X)
             get_element(cases, this->_y_pos, this->_x_pos + 1)->get_water
                     (*this);
-        if (this->_y_pos < MAX_Y and this->_x_pos > 0)
-            get_element(cases, this->_y_pos + 1, this->_x_pos - 1)->get_water
-                    (*this);
         if (this->_y_pos > 0 and this->_x_pos < MAX_X)
             get_element(cases,this->_y_pos - 1,  this->_x_pos + 1)->get_water
+                    (*this);
+        if (this->_y_pos < MAX_Y and this->_x_pos > 0)
+            get_element(cases, this->_y_pos + 1, this->_x_pos - 1)->get_water
                     (*this);
         this->_water += 5;
         this->check_state_color();
