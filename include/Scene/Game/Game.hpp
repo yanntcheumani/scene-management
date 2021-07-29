@@ -18,7 +18,7 @@ namespace scenes {
       void draw_scene() override;
       void tick() override;
   private:
-    std::map<int, std::list<std::shared_ptr<object::Case>>> _case;
+    std::list<std::list<std::shared_ptr<object::Case>>> _case;
   };
 };
 #endif //INC_EDBC1FCB623443A2903877287B7E6592

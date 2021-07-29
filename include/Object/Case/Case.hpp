@@ -18,10 +18,11 @@ namespace object {
         explicit Case(sf::Vector2f &position, sf::Vector2f &size, int x_pos,
                       int y_pos);
         void tick() override;
-        void tick(std::map<int, std::list<std::shared_ptr<object::Case>>> cases) override;
+        void tick(std::list<std::list<std::shared_ptr<object::Case>>> cases)
+        override;
         void draw_object(sf::RenderWindow &window) override;
         ~Case() override;
-        sf::Color check_state_color();
+        void check_state_color();
 
         const sf::Vector2f &getSize() const;
 
@@ -39,6 +40,8 @@ namespace object {
         int _water;
         int _x_pos;
         int _y_pos;
+
+        void create_sprites();
     };
 }
 

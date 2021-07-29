@@ -11,15 +11,21 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 
-#define WATER_ELEMENT sf::Color(212, 241, 249);
-#define DARK_WATER_ELEMENT sf::Color(0,0, 200)
-#define GROUND_ELEMENT sf::Color(124, 40, 17)
-#define DARK_GROUND_ELEMENT sf::Color(113, 46, 28)
+#define WATER_ELEMENT "../asset/isometric-sandbox-32x32/isometric-sandbox-32x32/blue_block/flat_block_blue.png"
+//sf::Color(212, 241, 249);
+#define DARK_WATER_ELEMENT "../asset/isometric-sandbox-32x32/isometric-sandbox-32x32/blue_block/flat_block_blue.png"
+//sf::Color(0,0, 200)
+#define GROUND_ELEMENT "../asset/isometric-sandbox-32x32/isometric-sandbox-32x32/green_block/flat_block_green.png"
+//sf::Color(124, 40, 17)
+#define DARK_GROUND_ELEMENT "../asset/isometric-sandbox-32x32/isometric-sandbox-32x32/grey_block/flat_block_grey.png"
+//sf::Color(113, 46, 28)
 
-#define MAX_Y 30
-#define MAX_X 30
+#define MAX_Y 20
+#define MAX_X 20
+#define SIZE_MAX_Y 32
+#define SIZE_MAX_X 32
 
-#define HOURS 6000
+#define HOURS 2000
 
 #define THICKNESS 5
 namespace utils {
