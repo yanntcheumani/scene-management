@@ -14,7 +14,6 @@ namespace core {
         std::map<utils::all_scenes, std::function<std::shared_ptr<scenes::AScene>()>>
         factory = {
                 {utils::GAME, [this](){return std::make_shared<scenes::Game>(this->_window);}},
-                {utils::MENU, [this](){return std::make_shared<scenes::AScene>(this->_window);}},
         };
         auto it = factory[scene];
         if (!it) {
@@ -28,10 +27,10 @@ namespace core {
     {
             if (this->_all_scenes.empty()) {
                 this->_scene = this->create_scene(scene);
-                return utils::SUCCESS;
+            } else {
+                this->_all_scenes.push(this->_scene);
+                this->_scene = this->create_scene(scene);
             }
-            this->_all_scenes.push(this->_scene);
-            this->_scene = this->create_scene(scene);
             return utils::SUCCESS;
     }
 

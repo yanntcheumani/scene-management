@@ -22,13 +22,11 @@ namespace scenes {
         if ((event.type == sf::Event::KeyPressed) &&
             (event.key.code == sf::Keyboard::Down))
             this->_move_object(utils::MOVE_DOWN);
-
         return utils::CONTINUE;
     }
 
     void Game::_move_object(utils::direction_t direction) {
-        for (auto &it: this->_case)
-            for (auto &cases: it)
-                cases->move(direction);
+        //TODO:
+        // move object
     }
 }

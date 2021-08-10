@@ -8,7 +8,6 @@
 #ifndef INC_EDBC1FCB623443A2903877287B7E6592
 #define INC_EDBC1FCB623443A2903877287B7E6592
 #include "Scene/AScene.hpp"
-#include "Object/Case/Case.hpp"
 
 namespace scenes {
   class Game: public AScene {
@@ -18,8 +17,6 @@ namespace scenes {
       void draw_scene() override;
       void tick() override;
   private:
-    std::list<std::list<std::shared_ptr<object::Case>>> _case;
-
       void _move_object(utils::direction_t direction);
   };
 };
