@@ -13,6 +13,7 @@
 
 #define MODE_WiDTH 1920
 #define MODE_HEIGHT 1080
+
 namespace core {
         class Core {
             public:
