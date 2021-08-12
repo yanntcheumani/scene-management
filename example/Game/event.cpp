@@ -5,7 +5,7 @@
 ** event.cpp
 */
 
-#include "Scene/Game/Game.hpp"
+#include "Game.hpp"
 
 
 namespace scenes {

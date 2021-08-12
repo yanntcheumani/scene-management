@@ -6,6 +6,7 @@
 */
 
 #include "Core/Core.hpp"
+#include "../../example/Game/Game.hpp"
 
 namespace core {
 

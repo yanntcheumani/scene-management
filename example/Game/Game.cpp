@@ -5,7 +5,7 @@
 ** Game.cpp
 */
 
-#include "Scene/Game/Game.hpp"
+#include "../Game/Game.hpp"
 #include <chrono>
 #include <thread>
 

@@ -8,7 +8,8 @@
 #ifndef INC_BA5451E6167B4B289E097A6C84F34CD0
 #define INC_BA5451E6167B4B289E097A6C84F34CD0
 #include "Core/CoreError.hpp"
-#include "Scene/Game/Game.hpp"
+#include "Scene/AScene.hpp"
+#include "utils.hpp"
 #include <stack>
 #include <memory>
 
