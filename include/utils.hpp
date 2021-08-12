@@ -11,18 +11,11 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 
-#define MAX_Y 20
-#define MAX_X 20
-#define SIZE_MAX_Y 32
-#define SIZE_MAX_X 32
-
-#define HOURS 0100
-
 namespace utils {
 
-    typedef enum all_scenes {
-        GAME
-    } All_scenes;
+    enum all_scenes {
+        GAME,
+    };
 
     typedef enum direction_t {
         MOVE_UP,

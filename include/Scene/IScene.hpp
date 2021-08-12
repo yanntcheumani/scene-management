@@ -9,7 +9,7 @@
 #define INC_0EB5C0F232BF4446988F20D19719ECF1
 #include "utils.hpp"
 #include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <list>
 
 namespace scenes {

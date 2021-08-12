@@ -17,7 +17,7 @@ namespace scenes {
     public:
         explicit AScene(sf::RenderWindow &window) : _window(window) {}
 
-        AScene(const std::shared_ptr<AScene> &scene):
+        explicit AScene(const std::shared_ptr<AScene> &scene):
         _window(scene->getWindow()) {}
 
         sf::RenderWindow &getWindow() const noexcept{
